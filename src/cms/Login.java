@@ -10,7 +10,7 @@ import model.User;
  * @author Elii
  */
 public class Login extends javax.swing.JFrame {
- 
+ //this is a pattern for creating an email
     public String emailPattern="^[a-zA-Z0-9]+[@]+[a-zA-Z0-9]+[.]+[a-zA-Z0-9]+$";
     /**
      * Creates new form Login
