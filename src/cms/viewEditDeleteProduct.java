@@ -218,7 +218,7 @@ public class viewEditDeleteProduct extends javax.swing.JFrame {
         Iterator<product> itr = list.iterator();
         while (itr.hasNext()) {
             product ProductObj = itr.next();
-            dtm.addRow(new Object[]{ProductObj.getId(),ProductObj.getName(),ProductObj.getCategory(),ProductObj.getPrice(),});
+            dtm.addRow(new Object[]{ProductObj.getId(),ProductObj.getName(),ProductObj.getCategory(),ProductObj.getPrice()});
 
         }
     }//GEN-LAST:event_formComponentShown
@@ -232,7 +232,7 @@ public class viewEditDeleteProduct extends javax.swing.JFrame {
         String name = model.getValueAt(index, 1).toString();
         txtName.setText(name);
         String Category = model.getValueAt(index, 1).toString();
-        
+        //jComboBox1.setText(Category);
         String price = model.getValueAt(index, 3).toString();
         txtPrice.setText(price);
         
