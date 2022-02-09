@@ -1,6 +1,7 @@
 
 package dao;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import model.User;
  
@@ -55,17 +56,42 @@ public class userDao {
         DbOperations.setDataorDelete(query, "Password changed succefully");
         
     }
+    public static ArrayList<User> getAllReocords(String email)
+    {
+       ArrayList<User> arrayList = new ArrayList<User>() ;
+       
+       try
+       {
+           ResultSet rs = DbOperations.getData("select *from user where email like '%"+email+"'");
+           while(rs.next())
+           {
+               User user = new User();
+               user.setId(rs.getInt("id"));
+               user.setName(rs.getString("name"));
+               user.setEmail(rs.getString("email"));
+               user.setMobileNumber(rs.getString("mobileNumber"));
+               user.setAddress(rs.getString("address"));
+               user.setSecurityQuestion(rs.getString("securityQuestion"));
+               user.setStatus(rs.getString("status"));
+               arrayList.add(user);
+               
+               
+               
+           }
+           
+       }catch(Exception e)
+       {
+           JOptionPane.showMessageDialog(null, e);
+       }
+       
+       return arrayList;
+        
+    }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    public static void changeStatus(String email, String status)
+    {
+        String query = "update user set status='"+status+"' where email='"+email+"'";
+        DbOperations.setDataorDelete(query, "status changed successfully");
+    }
+     
 }
