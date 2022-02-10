@@ -62,7 +62,7 @@ public class userDao {
        
        try
        {
-           ResultSet rs = DbOperations.getData("select *from user where email like '%"+email+"'");
+           ResultSet rs = DbOperations.getData("select *from user where email like '%"+email+"%'");
            while(rs.next())
            {
                User user = new User();

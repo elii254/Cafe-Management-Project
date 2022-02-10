@@ -156,6 +156,7 @@ public class verifyUsers extends javax.swing.JFrame {
         }else
         {
             status ="true";
+        }
             int a = JOptionPane.showConfirmDialog(null, "Do you want to change the status of "+email+"","select",JOptionPane.YES_NO_OPTION);
             if(a==0)
             {
@@ -163,7 +164,7 @@ public class verifyUsers extends javax.swing.JFrame {
                 setVisible(false);
                 new verifyUsers().setVisible(true);
             }
-        }
+        
         
         
         
