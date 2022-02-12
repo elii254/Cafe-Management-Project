@@ -91,7 +91,7 @@ public class userDao {
     public static void changeStatus(String email, String status)
     {
         String query = "update user set status='"+status+"' where email='"+email+"'";
-        DbOperations.setDataorDelete(query, "status changed successfully");
+        DbOperations.setDataorDelete(query, "Status Changed Successfully");
     }
      
 }

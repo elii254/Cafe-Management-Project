@@ -6,11 +6,12 @@
             <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/cms/Home.java</file>
             <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/cms/PlaceOrder.java</file>
             <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/dao/billDao.java</file>
-            <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/dao/userDao.java</file>
+            <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/cms/ViewBillsOrderPlacedDetails.java</file>
             <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/model/bill.java</file>
-            <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/dao/tables.java</file>
+            <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/dao/userDao.java</file>
             <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/cms/verifyUsers.java</file>
-            <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/cms/signup.java</file>
+            <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/dao/DbOperations.java</file>
+            <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/common/openPdf.java</file>
             <file>file:/C:/Users/Elii/OneDrive%20-%20Burn%20Manufacturing/Documents/NetBeansProjects/CMS/src/cms/Login.java</file>
         </group>
     </open-files>

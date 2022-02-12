@@ -11,11 +11,12 @@ public class Home extends javax.swing.JFrame {
     
     public Home() {
         initComponents();
+        
     }
     public Home(String userEmail) {
         initComponents();
-        userEmail =email;
-       //email = userEmail;
+        //userEmail =email;
+        email = userEmail;
         if(!email.equals("admin@gmail.com"))
         {
             btnManage.setVisible(false);
@@ -134,6 +135,11 @@ public class Home extends javax.swing.JFrame {
         jButton11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/View Bills & Order Placed Details.png"))); // NOI18N
         jButton11.setText("View bill and order details");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/home-background-image.png"))); // NOI18N
@@ -184,8 +190,14 @@ public class Home extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        new PlaceOrder(email).setVisible(true);
+        new PlaceOrder().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new ViewBillsOrderPlacedDetails().setVisible(true);
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
      * @param args the command line arguments

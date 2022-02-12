@@ -49,4 +49,66 @@ public class ProductDao {
         String delete="delete from product where id='"+id+"' ";
         DbOperations.setDataorDelete(delete, "Product deleted successfully");
     }
+    
+    public static  ArrayList<product> getAllRecordsByCategory(String category){
+        
+        ArrayList<product> arraylist = new ArrayList<>();
+        try
+        {
+            ResultSet rs = DbOperations.getData("select *from product where category='"+category+"'");
+            while(rs.next())
+            {
+                product Product = new  product();
+                Product.setName(rs.getString("name"));
+                arraylist.add(Product);
+                
+            }
+            
+        }catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        return arraylist;
+        
+    }
+      public static  ArrayList<product> filterProductByName(String name,String category){
+        
+        ArrayList<product> arraylist = new ArrayList<>();
+        try
+        {
+            ResultSet rs = DbOperations.getData("select *from product where name like '%"+name+"%' and category='"+category+"'");
+            while(rs.next())
+            {
+                product Product = new  product();
+                Product.setName(rs.getString("name"));
+                arraylist.add(Product);
+           }
+            
+        }catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        return arraylist;       
+    }
+      public static product getProductByName(String name)
+      {
+          product Product = new product();
+          try
+          {
+              ResultSet rs = DbOperations.getData("select *from  product where name='"+name+"'");
+              while(rs.next())
+              {
+                  Product.setName(rs.getString(2));
+                  Product.setCategory(rs.getString(3));
+                  Product.setPrice(rs.getString(4));
+                  
+              }
+                     
+              
+          }catch(Exception e)
+          {
+              JOptionPane.showMessageDialog(null, e);
+          }
+          return Product;
+      }
 }
